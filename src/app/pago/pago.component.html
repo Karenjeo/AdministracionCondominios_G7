@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="form-container">
+  <div class="form">
+    <div class="table">
+      <h2>Formulario</h2>
+      <div class="formulario">
+        <form>
+
+
+          <label for="residente"><i class="bi bi-person-fill"></i></label>
+          <select class="in" id="residente" name="residente" required>
+            <!-- Aquí debes cargar dinámicamente las propiedades desde la base de datos -->
+            <option value="1">Residente 1</option>
+            <option value="2">Residente 2</option>
+            <!-- Puedes agregar más opciones según las propiedades registradas -->
+          </select>
+          <br>
+
+          <label for="monto"><i class="bi bi-cash-stack"></i></label>
+          <input class="in" type="text" id="monto" name="monto" placeholder="Monto">
+
+          <br>
+          <label ><i class="bi bi-calendar-week"></i></label>
+          <input class="in"  type="date" class="form-control" id="fecha_pago" name="fecha_pago" required>
+
+          <br>
+          <label for="estado"><i class="bi bi-file-check"></i></label>
+          <input class="in" type="text" id="estado" name="estado"placeholder="Estado de Mantenimiento">
+          <br>
+          <label for="metodo"><i class="bi bi-cash-stack"></i></label>
+          <input class="in" type="text" id="metodo" name="metodo"  placeholder="Método">
+          <br>
+          <label for="estadoPago"><i class="bi bi-file-check"></i></label>
+          <input class="in" type="text" id="estadoPago" name="estadoPago"  placeholder="Método">
+          <br>
+          <button type="submit" class="btn btn-primary">Registrar Pago</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Historial de Pago</h2>
+    <table class="tabla">
+      <thead>
+      <tr class="primera">
+        <th>Residente</th>
+        <th>Monto</th>
+        <th>Fecha pago</th>
+        <th>Método de pago</th>
+        <th>Estado de pago</th>
+        <th>Actualizar</th>
+        <th>Eliminar</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Aquí puedes añadir las filas de la tabla con los datos -->
+      <!-- Ejemplo de fila de la tabla -->
+      <tr>
+        <td>juan</td>
+        <td>23.2</td>
+        <td>01/01/2022</td>
+        <td>Efectivo</td>
+        <td>Pendiente</td>
+        <td><input type="submit" value="Actualizar"></td>
+        <td><input type="reset" value="Eliminar"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
