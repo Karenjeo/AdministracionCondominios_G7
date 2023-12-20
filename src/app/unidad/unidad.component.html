@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="form-container">
+  <div class="form">
+    <div class="table">
+      <h2>Formulario</h2>
+      <div class="formulario">
+        <form>
+
+
+          <label for="propiedad"><i class="bi bi-house"></i></label>
+          <select class="in" id="propiedad" name="propiedad" required>
+            <!-- Aquí debes cargar dinámicamente las propiedades desde la base de datos -->
+            <option value="1">Propiedad 1</option>
+            <option value="2">Propiedad 2</option>
+            <!-- Puedes agregar más opciones según las propiedades registradas -->
+          </select>
+          <br>
+
+          <label for="numUnidad"><i class="bi bi-hash"></i></label>
+          <input class="in" type="number" id="numUnidad" name="numUnidad" placeholder="número Unidad">
+
+          <br>
+          <label for="metros"><i class="bi bi-house"></i></label>
+          <input class="in" type="text" id="metros" name="metros"  placeholder="Metros cuadrados">
+          <br>
+          <label for="numHabitantes"><i class="bi bi-hash"></i></label>
+          <input class="in" type="num" id="numHabitantes" name="numHabitantes"  placeholder="Número habitantes">
+          <br>
+          <label for="numBanos"><i class="bi bi-hash"></i></label>
+          <input class="in" type="number" id="numBanos" name="numBanos"  placeholder="Número de Baños">
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Historial de Unidades</h2>
+    <table class="tabla">
+      <thead>
+      <tr class="primera">
+        <th>Propiedad</th>
+        <th>Número de Unidad</th>
+        <th>Metros cuadrados</th>
+        <th>Número de habitantes</th>
+        <th>Número de baños</th>
+        <th>Actualizar</th>
+        <th>Eliminar</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Aquí puedes añadir las filas de la tabla con los datos -->
+      <!-- Ejemplo de fila de la tabla -->
+      <tr>
+        <td>Propiedad1</td>
+        <td>56</td>
+        <td>67m</td>
+        <td>4</td>
+        <td>3</td>
+        <td><input type="submit" value="Actualizar"></td>
+        <td><input type="reset" value="Eliminar"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
+

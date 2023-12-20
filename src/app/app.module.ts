@@ -12,6 +12,8 @@ import { ActualizarPropiedadComponent } from './actualizar-propiedad/actualizar-
 import { ActualizarPersonalComponent } from './actualizar-personal/actualizar-personal.component';
 import { ActualizarPagoComponent } from './actualizar-pago/actualizar-pago.component';
 import { ActualizarMantenimientoComponent } from './actualizar-mantenimiento/actualizar-mantenimiento.component';
+import { ResidenteComponent } from './residente/residente.component';
+import { UnidadComponent } from './unidad/unidad.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ActualizarMantenimientoComponent } from './actualizar-mantenimiento/act
     ActualizarPropiedadComponent,
     ActualizarPersonalComponent,
     ActualizarPagoComponent,
-    ActualizarMantenimientoComponent
+    ActualizarMantenimientoComponent,
+    ResidenteComponent,
+    UnidadComponent
   ],
   imports: [
     BrowserModule,
