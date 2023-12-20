@@ -16,7 +16,20 @@ export class ResidentesComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerTodosLosResidentes();
   }
-
+  ///valiaciones 
+  validarCampos(){
+    var nombre = (<HTMLInputElement>document.getElementById("nombre")).value;
+    var apellido = (<HTMLInputElement>document.getElementById("apellido")).value;
+    var direccion = (<HTMLInputElement>document.getElementById("direccion")).value;
+    var ciudad = (<HTMLInputElement>document.getElementById("ciudad")).value;
+     
+  
+    if(nombre == "" || apellido == "" || direccion == "" || ciudad == "" || estado == "" || codigo == "" || telefono == "" || email == "" || tarjeta == "" || nombreTarjeta == "" || fecha == "" || cvv == ""){
+      alert("Todos los campos son obligatorios");
+    }else{
+      alert("Compra realizada con exito");
+    }
+  }
   obtenerTodosLosResidentes(): void {
     this.residentesService.obtenerTodos().subscribe(
       data => {
