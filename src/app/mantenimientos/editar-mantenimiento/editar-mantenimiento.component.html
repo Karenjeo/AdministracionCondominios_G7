@@ -1,0 +1,39 @@
+<!-- Enlace al CDN de Bootstrap Icons (versión 1.11.0) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<nav class="navbar">
+  <h2>Editar Mantenimiento</h2>
+</nav>
+
+      <div class="formulario"> 
+<form (ngSubmit)="actualizarMantenimiento()">
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label><i class="bi bi-file-earmark-text"></i>
+      <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" [(ngModel)]="mantenimientos.descripcion">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="costo">costo</label><i class="bi bi-cash"></i>
+        <input type="text" class="form-control" id="costo" name="costo" placeholder="costo" [(ngModel)]="mantenimientos.costo">
+  
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_solicitud">fecha_solicitud</label><i class="bi bi-calendar"></i>
+        <input type="text" class="form-control" id="fecha_solicitud" name="fecha_solicitud" placeholder="descripcion" [(ngModel)]="mantenimientos.fecha_solicitud">
+  
+      </div>
+
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        
+        <select class="form-control" id="estado" name="estado" [(ngModel)]="mantenimientos.estado_mantenimeinto">
+          <option value="true">Activo</option>
+          <option value="false">Inactivo</option>
+        </select>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

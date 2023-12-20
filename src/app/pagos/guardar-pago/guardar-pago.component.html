@@ -1,0 +1,24 @@
+<form (ngSubmit)="insertar()">
+    <div class="form-group">
+        <label for="monto">monto</label>
+        <input type="number" class="form-control" id="monto" aria-describedby="monto" placeholder="monto" name="monto" [(ngModel)]="pagos.monto">
+    </div>
+    <div class="form-group">
+        <label for="estadoPago">estadoPago</label>
+        <input type="text" class="form-control" id="estadoPago" aria-describedby="estadoPago" placeholder="estadoPago" name="estadoPago" [(ngModel)]="pagos.estadoPago">
+    </div>
+    <div class="form-group">
+        <label for="metodo_pago">metodo_pago</label>
+        <input type="text" class="form-control" id="metodo_pago" aria-describedby="metodo_pago" placeholder="metodo_pago" name="metodo_pago" [(ngModel)]="pagos.metodo_pago">
+    </div>
+    <div class="form-group">
+        <label for="fechaPago">fechaPago</label>
+        <input type="text" class="form-control" id="fechaPago" aria-describedby="fechaPago" placeholder="fechaPago" name="fechaPago" [(ngModel)]="pagos.fechaPago">
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

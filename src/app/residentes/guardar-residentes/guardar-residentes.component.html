@@ -1,0 +1,24 @@
+<!-- guardar-residentes.component.html -->
+<div>
+    <h2>Guardar Nuevo Residente</h2>
+  
+    <form (ngSubmit)="guardarResidente()">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="nuevoResidente.nombre" name="nombre" />
+
+      <label>Id UNIDAD:</label>
+      <input type="number" [(ngModel)]="nuevoResidente.id_unidad" name="id_unidad" />
+  
+      <label>Teléfono:</label>
+      <input type="text" [(ngModel)]="nuevoResidente.telefono" name="telefono" />
+  
+      <label>Correo Electrónico:</label>
+      <input type="text" [(ngModel)]="nuevoResidente.correo_electronico" name="correoElectronico" />
+  
+      <label>Fecha Ingreso:</label>
+      <input type="text" [(ngModel)]="nuevoResidente.fecha_ingreso" name="fechaIngreso" />
+  
+      <!-- Puedes agregar más campos según tus necesidades -->
+      <button type="submit">Guardar Residente</button>
+    </form>
+</div>

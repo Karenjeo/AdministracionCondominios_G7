@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <a routerLink="./propiedades" (click)="irAPropiedades()" routerLinkActive="active" class="menu-list-item">Propiedades</a>
+  <a routerLink="./unidades"  (click)="IrAPersonal()" routerLinkActive="active" class="menu-list-item">Unidades</a>
+  <a routerLink="./residentes" (click)="irAResidentes()" routerLinkActive="active" class="menu-list-item">Residentes</a>
+  <a [routerLink]="['/pago']" (click)="irAPagos()" routerLinkActive="active" class="menu-list-item">Pagos</a>
+  <a [routerLink]="['/guardar-mantenimientos/']" (click)="irAMantenimiento()">Mantenimiento</a>
+</nav>
+
+<div class="container">
+  <h2>Mantenimiento</h2>
+<br>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Codigo Postal</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datos of mantenimiento">
+        
+        <td>{{datos.descripcion}}</td>
+        <td>{{datos.costo}}</td>
+        <td>{{datos.fecha_solicitud}}</td>
+        <td>{{datos.estado_mantenimeinto}}</td>
+        <!-- <td><a class="btn btn-secondary btn-sm me-3" [routerLink]="['/guardar-mantenimientos/',datos.id_propiedades]">Movimiento Inventario</a></td> -->
+       
+        <td><a class="btn btn-warning btn-sm me-3" [routerLink]="['/editar-mant/',datos.id_mantenimiento]">Editar</a></td>
+        <td><button (click)="eliminar(datos.id_mantenimiento)" class="btn btn-danger btn-sm me-3">Eliminar</button></td>
+
+      </tr>
+     
+
+     
+    </tbody>
+
+    <button (click)="IrAPersonal()" class="btn btn-danger btn-sm me-3">Personal</button>
+  </table>

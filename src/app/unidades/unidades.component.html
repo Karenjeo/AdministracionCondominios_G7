@@ -1,0 +1,53 @@
+<nav class="navbar">
+  <a routerLink="./propiedades" (click)="irAPropiedades()" routerLinkActive="active" class="menu-list-item">Propiedades</a>
+  <a routerLink="./unidades"  (click)="irAUnidades()" routerLinkActive="active" class="menu-list-item">Unidades</a>
+  <a routerLink="./residentes" (click)="irAResidentes()" routerLinkActive="active" class="menu-list-item">Residentes</a>
+  <a [routerLink]="['/pago']" (click)="irAPagos()" routerLinkActive="active" class="menu-list-item">Pagos</a>
+  <a [routerLink]="['/guardar-mantenimientos/']" (click)="irAMantenimiento()">Mantenimiento</a>
+</nav>
+
+
+<div class="container">
+  <h2>Listado Unidades</h2>
+  <button class="btn btn-primary" (click)="irAGuardarUnidad()">Guardar Unidad</button><br>
+<br>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Propiedad ID</th>
+        <!-- Agrega más encabezados según tus necesidades -->
+        <th>Cantidad unidades</th>
+        <th>Metros</th>
+        <th>Cantidad habitaciones</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        <th>Asignar residente</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let unidad of unidades">
+        <td>{{ unidad.id_unidad }}</td>
+        <td>{{ unidad.id_propiedad.id_propiedades }}</td>
+
+        <td>{{ unidad.cantidad_unidades }}</td>
+        <td>{{ unidad.metros_cuadrados }}</td>
+        <td>{{ unidad.cantidad_habitaciones }}</td>
+
+        <!-- Agrega más columnas según tus necesidades -->
+
+        <!-- Botón para eliminar -->
+        <td>
+          <button class="btn btn-primary" (click)="editarUnidad(unidad.id_unidad)">Editar</button></td>
+        <td>
+          <button class="btn btn-danger" (click)="eliminarUnidad(unidad.id_unidad)">Eliminar</button>
+        </td>
+        
+        <td> <button class="btn btn-primary" (click)="irAResidentes()">Ir a residentes</button></td>
+      </tr>
+    </tbody>
+  </table>
+ 
+ 
+</div>

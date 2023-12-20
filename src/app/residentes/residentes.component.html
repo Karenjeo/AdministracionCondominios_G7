@@ -1,0 +1,48 @@
+<nav class="navbar">
+  <a routerLink="./propiedades" (click)="irAPropiedades()" routerLinkActive="active" class="menu-list-item">Propiedades</a>
+  <a routerLink="./unidades"  (click)="irAUnidades()" routerLinkActive="active" class="menu-list-item">Unidades</a>
+  <a routerLink="./residentes" (click)="irAResidentes()" routerLinkActive="active" class="menu-list-item">Residentes</a>
+  <a [routerLink]="['/pago']" (click)="irAPagos()" routerLinkActive="active" class="menu-list-item">Pagos</a>
+  <a [routerLink]="['/guardar-mantenimientos/']" (click)="irAMantenimiento()">Mantenimiento</a>
+</nav>
+
+<!-- residentes.component.html -->
+<div class="container">
+  <h2>Residentes</h2>
+  <button class="btn btn-danger" (click)="GuardarResidentes()">Guardar Residente</button>
+  <br>
+<br>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Unidad ID</th>
+          <th>Teléfono</th>
+          <th>Correo Electrónico</th>
+          <th>Fecha Ingreso</th>
+          <th>Asignar pago</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let residente of residentes">
+          <td>{{ residente.id_residente }}</td>
+          <td>{{residente.id_unidad.id_unidad}}</td>
+          <td>{{ residente.nombre }}</td>
+          <td>{{ residente.telefono }}</td>
+          <td>{{ residente.correo_electronico }}</td>
+          <td>{{ residente.fecha_ingreso }}</td>
+
+  
+          <!-- Botones para acciones -->
+          <td>
+            <a class="btn btn-secondary btn-sm me-3" [routerLink]="['/guardar-pagos/',residente.id_residente]">Asignar Pago</a>
+            <button class="btn btn-danger" (click)="eliminarResidente(residente.id_residente)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  

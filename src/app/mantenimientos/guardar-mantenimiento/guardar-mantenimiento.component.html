@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <h2>Registro de Propiedad</h2>
+</nav>
+
+      <div class="formulario"> 
+<form (ngSubmit)="guardarMantenimientos()">
+    <div class="form-group">
+      <label for="descripcion">descripcion</label>
+      <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" [(ngModel)]="mantenimientos.descripcion">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="costo">costo</label>
+        <input type="text" class="form-control" id="costo" name="costo" placeholder="costo" [(ngModel)]="mantenimientos.costo">
+  
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_solicitud">fecha_solicitud</label>
+        <input type="text" class="form-control" id="fecha_solicitud" name="fecha_solicitud" placeholder="descripcion" [(ngModel)]="mantenimientos.fecha_solicitud">
+  
+      </div>
+
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        
+        <select class="form-control" id="estado" name="estado" [(ngModel)]="mantenimientos.estado_mantenimeinto">
+          <option value="true">Activo</option>
+          <option value="false">Inactivo</option>
+        </select>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

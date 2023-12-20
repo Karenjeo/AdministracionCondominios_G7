@@ -1,0 +1,23 @@
+<!-- guardar-unidades.component.html -->
+<div>
+    <h2>Guardar Nueva Unidad</h2>
+  
+    <form>
+      <label>ID Propiedad:</label>
+      <input type="number" [(ngModel)]="idPropiedad" name="idPropiedad" />
+  
+      <label>Cantidad de Unidades:</label>
+      <input type="number" [(ngModel)]="nuevaUnidad.cantidad_unidades" name="cantidadUnidades" />
+  
+      <label>Metros cuadrados:</label>
+      <input type="number" [(ngModel)]="nuevaUnidad.metros_cuadrados" name="metrosCuadrados" />
+  
+      <label>Cantidad Habitaciones:</label>
+      <input type="number" [(ngModel)]="nuevaUnidad.cantidad_habitaciones" name="cantidadHabitaciones" />
+    
+      <!-- Agrega más campos según tus necesidades -->
+    
+      <button type="button" (click)="guardarUnidad()">Guardar Unidad</button>
+    </form>
+  </div>
+  

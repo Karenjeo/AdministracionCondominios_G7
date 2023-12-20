@@ -1,0 +1,50 @@
+<nav class="navbar">
+  <a routerLink="./propiedades" (click)="irAPropiedades()" routerLinkActive="active" class="menu-list-item">Propiedades</a>
+  <a routerLink="./unidades"  (click)="irAUnidades()" routerLinkActive="active" class="menu-list-item">Unidades</a>
+  <a routerLink="./residentes" (click)="irAResidentes()" routerLinkActive="active" class="menu-list-item">Residentes</a>
+  <a [routerLink]="['/pago']" (click)="irAPagos()" routerLinkActive="active" class="menu-list-item">Pagos</a>
+  <a [routerLink]="['/guardar-mantenimientos/']" (click)="irAMantenimiento()">Mantenimiento</a>
+</nav>
+
+
+<div class="container">
+  <h2>Propiedades</h2>
+  <button (click)="GuardarPropiedades()" class="btn btn-success btn-sm me-3">Registrar Propiedades</button>
+<br>
+<br>
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Codigo Postal</th>
+        <th scope="col">Asignar Mantenimiento</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+        <th scope="col">Realizar Mantenimiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datos of propiedades">
+        <td>{{datos.nombre}}</td>
+        <td>{{datos.direccion}}</td>
+        <td>{{datos.ciudad}}</td>
+        <td>{{datos.estado}}</td>
+        <td>{{datos.cod_postal}}</td>
+        
+        <td>
+          <a class="btn btn-warning btn-sm me-3" [routerLink]="['/editar-propiedades/', datos.id_propiedades]">Editar</a>
+        </td>
+        <td>
+          <button (click)="eliminar(datos.id_propiedades)" class="btn btn-danger btn-sm me-3">Eliminar</button>
+        </td>
+        <td>
+          <a class="btn btn-secondary btn-sm me-3" [routerLink]="['/guardar-mantenimientos/', datos.id_propiedades]">Mantenimiento</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</div>

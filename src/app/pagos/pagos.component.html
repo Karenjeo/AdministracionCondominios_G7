@@ -1,0 +1,45 @@
+<nav class="navbar">
+  <a routerLink="./propiedades" (click)="irAPropiedades()" routerLinkActive="active" class="menu-list-item">Propiedades</a>
+  <a routerLink="./unidades"  (click)="irAUnidades()" routerLinkActive="active" class="menu-list-item">Unidades</a>
+  <a routerLink="./residentes" (click)="irAResidentes()" routerLinkActive="active" class="menu-list-item">Residentes</a>
+  <a [routerLink]="['/pago']" (click)="irAPagos()" routerLinkActive="active" class="menu-list-item">Pagos</a>
+  <a [routerLink]="['/guardar-mantenimientos/']" (click)="irAMantenimiento()">Mantenimiento</a>
+</nav>
+<div class="container">
+  <h2>Pagos</h2>
+<button (click)="GuardarPago()" class="btn btn-success btn-sm me-3">Registrar Pago</button>
+<br>
+<br>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Monto</th>
+        <th scope="col">Estado de Pago</th>
+        <th scope="col">Método Pago</th>
+        <th scope="col">Fecha Pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datos of pagos">
+        
+        <td>{{datos.monto}}</td>
+        <td>{{datos.estadoPago}}</td>
+        <td>{{datos.metodo_pago}}</td>
+        <td>{{datos.fechaPago}}</td>
+        <!-- <td><a class="btn btn-secondary btn-sm me-3" [routerLink]="['/guardar-mantenimientos/',datos.id_propiedades]">Movimiento Inventario</a></td> -->
+       
+        <td><a class="btn btn-warning btn-sm me-3" [routerLink]="['/editar-pagos/',datos.id_pago]">Editar</a></td>
+        <!-- <td><button (click)="eliminar(datos.id_mantenimiento)" class="btn btn-danger btn-sm me-3">Eliminar</button></td> -->
+
+        <td>
+          <button (click)="eliminarPago(datos.id_pago)" class="btn btn-danger btn-sm me-3">Eliminar</button>
+        </td>
+        <td>
+      </tr>
+     
+
+     
+    </tbody>
+  </table>
+</div>
