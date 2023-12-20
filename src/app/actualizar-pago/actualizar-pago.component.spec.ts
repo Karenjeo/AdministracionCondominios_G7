@@ -17,7 +17,24 @@ describe('ActualizarPagoComponent', () => {
     fixture.detectChanges();
   });
 
+  ///validaciones
+  validarCampos(){
+  a
+    var tarjeta = (<HTMLInputElement>document.getElementById("tarjeta")).value;
+    var nombreTarjeta = (<HTMLInputElement>document.getElementById("nombreTarjeta")).value;
+    var fecha = (<HTMLInputElement>document.getElementById("fecha")).value;
+    var cvv = (<HTMLInputElement>document.getElementById("cvv")).value;
+  
+    if(nombre == "" || apellido == "" || direccion == "" || ciudad == "" || estado == "" || codigo == "" || telefono == "" || email == "" || tarjeta == "" || nombreTarjeta == "" || fecha == "" || cvv == ""){
+      alert("Todos los campos son obligatorios");
+    }else{
+      alert("Compra realizada con exito");
+    }
+  }
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ 
