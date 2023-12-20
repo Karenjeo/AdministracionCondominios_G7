@@ -6,7 +6,10 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+<<<<<<< HEAD
     "strictPropertyInitialization": false,
+=======
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -17,11 +20,18 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+<<<<<<< HEAD
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
+=======
+    "target": "es2020",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
       "dom"
     ]
   },

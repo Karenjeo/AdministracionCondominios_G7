@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "proyectofront": {
       "projectType": "application",
       "schematics": {},
+=======
+    "ProyectoU1Front-end": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,12 +23,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/proyectofront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
+=======
+            "outputPath": "dist/proyecto-u1-front-end",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -43,6 +60,15 @@
                   "maximumError": "4kb"
                 }
               ],
+<<<<<<< HEAD
+=======
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
               "outputHashing": "all"
             },
             "development": {
@@ -60,10 +86,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "proyectofront:build:production"
             },
             "development": {
               "browserTarget": "proyectofront:build:development"
+=======
+              "browserTarget": "ProyectoU1Front-end:build:production"
+            },
+            "development": {
+              "browserTarget": "ProyectoU1Front-end:build:development"
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
             }
           },
           "defaultConfiguration": "development"
@@ -71,17 +104,28 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "proyectofront:build"
+=======
+            "browserTarget": "ProyectoU1Front-end:build"
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+<<<<<<< HEAD
             "polyfills": [
               "zone.js",
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+=======
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -94,8 +138,11 @@
         }
       }
     }
+<<<<<<< HEAD
   },
   "cli": {
     "analytics": "a73d03b4-659a-4954-a2f2-c481f2e964dc"
+=======
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
   }
 }

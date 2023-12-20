@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="form-container">
+  <div class="form">
+    <div class="table">
+      <h2>Formulario</h2>
+      <div class="formulario">
+        <form>
+
+
+          <label for="propiedad"><i class="bi bi-house"></i></label>
+          <select class="in" id="propiedad" name="propiedad" required>
+            <!-- Aquí debes cargar dinámicamente las propiedades desde la base de datos -->
+            <option value="1">propiedad 1</option>
+            <option value="2">propiedad 2</option>
+            <!-- Puedes agregar más opciones según las propiedades registradas -->
+          </select>
+          <br>
+
+          <label for="nombre"><i class="bi bi-person-fill"></i></label>
+          <input class="in" type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+          <br>
+
+          <label for="puesto"><i class="bi bi-pin-map"></i></label>
+          <input class="in" type="text" id="puesto" name="puesto" placeholder="Puesto">
+          <br>
+
+          <label for="tel"><i class="bi bi-telephone"></i></label>
+          <input class="in" type="number" id="tel" name="tel" placeholder="Télefono">
+          <br>
+
+          <label for="correo"><i class="bi bi-envelope"></i></label>
+          <input class="in" type="email" id="correo" name="correo" placeholder="Correo Eléctornico">
+
+          <br>
+          <label ><i class="bi bi-calendar-week"></i></label>
+          <input class="in"  type="date" class="form-control" id="fecha_contraro" name="fecha_contraro" required>
+          <br>
+
+          <button type="submit" class="btn btn-primary">Registrar Personal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Historial de Personal</h2>
+    <table class="tabla">
+      <thead>
+      <tr class="primera">
+        <th>Propiedad</th>
+        <th>Nombre</th>
+        <th>Puesto</th>
+        <th>Télefono</th>
+        <th>Correo eléctronico</th>
+        <th>Fecha contrato</th>
+        <th>Actualizar</th>
+        <th>Eliminar</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Aquí puedes añadir las filas de la tabla con los datos -->
+      <!-- Ejemplo de fila de la tabla -->
+      <tr>
+        <td>Propiedad 1</td>
+        <td>Juan</td>
+        <td>6</td>
+        <td>0986609322</td>
+        <td>jjrenteria@espe.edu.ec</td>
+        <td>01/01/2022</td>
+        <td><input type="submit" value="Actualizar"></td>
+        <td><input type="reset" value="Eliminar"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

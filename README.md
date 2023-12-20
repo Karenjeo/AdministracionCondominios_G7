@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Proyectofront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+=======
+# ProyectoU1FrontEnd
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
 
 ## Development server
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { PropiedadesComponent } from './propiedades/propiedades.component';
 import { EditarPropiedadesComponent } from './propiedades/editar-propiedades/editar-propiedades.component';
 import { GuardarPropiedadesComponent } from './propiedades/guardar-propiedades/guardar-propiedades.component';
@@ -40,6 +41,16 @@ const routes: Routes = [
 
 ];
 
+=======
+import {MantenimientoComponent} from "./mantenimiento/mantenimiento.component";
+
+
+
+const routes: Routes = [
+  { path: 'mantenimiento', component:  MantenimientoComponent },
+
+];
+>>>>>>> 8039ec33c34e03ac266a84969bef9d2519c59607
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
